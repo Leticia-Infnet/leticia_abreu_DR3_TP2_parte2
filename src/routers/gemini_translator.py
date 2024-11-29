@@ -1,4 +1,3 @@
-import logging
 import os
 from fastapi import APIRouter
 from dotenv import load_dotenv
@@ -6,19 +5,16 @@ from dotenv import load_dotenv
 # Imports langchain
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
-from langchain.globals import set_llm_cache
-from langchain_community.cache import InMemoryCache
 
 # Imports locais
 from models.gemini_translator import GeminiTranslator, ChatModel, ChatResponseModel
 from .utils.latency_monitor import monitor_latency
 
-load_dotenv(dotenv_path=os.path.abspath(os.path.join('.env')))
+load_dotenv(os.path.abspath(os.path.join('.', '.env')))
 
-api_key = str(os.getenv('GOOGLE_API_KEY'))
+api_key = os.environ.get('GOOGLE_API_KEY')
 
 router = APIRouter()
-
 
 llm = ChatGoogleGenerativeAI(
     api_key=api_key,

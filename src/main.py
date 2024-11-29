@@ -1,3 +1,5 @@
+import os
+import uvicorn
 from fastapi import FastAPI
 from routers.fake_llm import router as FakeLLMRouter
 from routers.gemini_translator import router as GeminiTranslator
@@ -21,3 +23,7 @@ app.include_router(router=HelsinkiTranslator,
 @app.post('/status')
 def check_status():
     return {'message': 'O servirdor está rodando!'}
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", port=8000)

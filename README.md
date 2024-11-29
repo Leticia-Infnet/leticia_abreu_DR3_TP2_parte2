@@ -36,7 +36,7 @@ Vá para o seguinte link para pegar sua chave:
 
 5. Se tudo estiver certo, estará assim:
 
-(./images/gemini-api-ativada.png)
+(gemini-api-ativada.png)
 
 ## Criando arquivo .env
 

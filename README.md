@@ -22,7 +22,6 @@ A biblioteca torch não está listada no requirements.txt. Isso porque as biblio
 
 Vá para o seguinte link para pegar sua chave:
 
-
 **https://aistudio.google.com/apikey**
 
 ⚠️ATENÇÃO⚠️
@@ -37,10 +36,7 @@ Vá para o seguinte link para pegar sua chave:
 
 5. Se tudo estiver certo, estará assim:
 
-
-
-
-
+(images/gemini-api-ativada.png)
 
 ## Criando arquivo .env
 

@@ -10,7 +10,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from models.gemini_translator import GeminiTranslator, ChatModel, ChatResponseModel
 from .utils.latency_monitor import monitor_latency
 
-load_dotenv(os.path.abspath(os.path.join('.', '.env')))
+load_dotenv(os.path.abspath('.env'),
+            override=True)
 
 api_key = os.environ.get('GOOGLE_API_KEY')
 
